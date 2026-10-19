@@ -108,6 +108,7 @@ p { color: var(--gray-light); margin: 0 0 1em; }
   justify-content: space-between;
   min-height: 68px;
   flex-wrap: nowrap;
+  gap: 24px;
 }
 .brand {
   display: flex;
@@ -158,13 +159,14 @@ p { color: var(--gray-light); margin: 0 0 1em; }
   color: var(--gray-light);
   text-transform: uppercase;
   padding: 6px 0;
+  white-space: nowrap;
   border-bottom: 2px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 .main-nav a:hover,
 .main-nav a[aria-current="page"] { color: var(--white); border-color: var(--garnet-light); }
 
-.header-actions { display: flex; align-items: center; gap: 14px; }
+.header-actions { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 
 .nav-toggle {
   display: none;
@@ -178,7 +180,8 @@ p { color: var(--gray-light); margin: 0 0 1em; }
   cursor: pointer;
 }
 
-@media (max-width: 860px) {
+/* Full nav needs ~1085px; em scales with the browser's font-size setting */
+@media (max-width: 70em) {
   .main-nav {
     position: fixed;
     top: 68px;
