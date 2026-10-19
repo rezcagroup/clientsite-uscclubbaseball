@@ -19,14 +19,14 @@ Plain HTML/CSS/JS, no build step — deployable as-is on Vercel, Netlify, GitHub
 ## Local preview
 
 ```bash
-python3 -m http.server 4173
+npx serve@14 -l 4173
 ```
 
-Then open http://localhost:4173
+Then open http://localhost:4173 (`serve` handles clean URLs like `/about`, matching Vercel's `cleanUrls`)
 
 ## Live site
 
-https://www.gamecockclubbaseball.com/ (GitHub Pages, deploys automatically on every push to `main`)
+https://www.gamecockclubbaseball.com/ (Vercel, deploys automatically on every push to `main`)
 
 ## Content sources (Sept 2026)
 
